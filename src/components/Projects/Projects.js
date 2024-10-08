@@ -19,6 +19,15 @@ import meta2 from "../../Assets/Projects/meta2.png";
 import meta3 from "../../Assets/Projects/meta3.png";
 import meta4 from "../../Assets/Projects/meta4.png";
 import man from "../../Assets/Projects/man.jpeg";
+import hdd from "../../Assets/Projects/hdd.jpg";
+import hdd1 from "../../Assets/Projects/hdd1.png";
+import hn from "../../Assets/Projects/hn.png";
+import hn1 from "../../Assets/Projects/hn1.png";
+import hn2 from "../../Assets/Projects/hn2.png";
+import hn3 from "../../Assets/Projects/hn3.png";
+import hn4 from "../../Assets/Projects/hn4.png";
+import hri from "../../Assets/Projects/hri.jpg";
+import hri1 from "../../Assets/Projects/hri1.jpg";
 
 function Projects() {
   return (
@@ -113,10 +122,77 @@ the Metaverse means having access to a higher level of immersive and entertainin
  E-Commerce applications.  This project implies that consumers will be able to virtually experience the real world through the metaverse, adding 
  a distinctive touch to online buying. The Metaverse, which combines <b className="purple">big data, AI, Blender, Three.js, Cryptocurrency, blockchain, and other digital technologies,</b> enables people to 
  explore virtual worlds, evaluate items, and select the ones they need."
+ <br />
+ <br />
+ <b className="purple">Presented paper titled "Metaverse Induced E-Commerce Website" at IConIC 2K23 (6th International 
+  Conference on Intelligent Computing) and secured publication in Scopus-indexed journal.</b>
     </>}
               screenshots={[meta, meta1, meta2, meta3, meta4]} // Multiple screenshots
               videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" // Example video link
             />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hdd}
+              isBlog={false}
+              title="Heart Disease Detection"
+              description=" This project analyzed and predicted possible heart diseases in people from their body
+symptoms with a various machine learning algorithm and deployed it as a web application using Flask
+with a score of 90.5%. "
+              extendedDescription={ <>"This project is designed to predict potential heart diseases using a variety of <b className="purple">machine learning algorithms,</b>
+               providing early diagnostic insights to assist healthcare professionals in making informed decisions. It includes a comparative 
+               analysis of commonly used classifiers, such as <b className="purple">decision tree, logistic regression, SVM, and random forest,</b> assessing their 
+               effectiveness in medical predictions. To enhance accuracy and prediction performance, an ensemble classifier combining <b className="purple">AdaBoost 
+               and XGBoost</b> is proposed, leveraging both strong and weak learners. This hybrid classification approach is capable of handling 
+               larger datasets for improved training and validation, ultimately outperforming individual classifiers. The project is deployed 
+               using <b className="purple">Flask,</b> enabling real-time interaction through a user-friendly web interface, making it easier for healthcare practitioners 
+               to incorporate machine learning predictions into their diagnostic process, offering a more data-driven approach to predicting 
+               heart disease risk."
+                <br />
+                <br />
+                
+                 </>}
+                screenshots={[hdd, hdd1]}       />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hn}
+              isBlog={false}
+              title="Home Nurse Calling System"
+              description=" This project developed a GUI application that sends automated notifications and calls to nurses during abnormal states, while also tracking their response to ensure the fastest care for home ICU patients."
+              extendedDescription={ <>"The <b className="purple">Home Nurse Calling IoT System </b> was developed to address the issue of ICU patients not receiving timely 
+              medical attention. This system continuously monitors patients' vital signs and sends an SOS 
+              signal to nearby nurses when a patient's condition becomes critical, such as when heart rate fluctuations occur. All available 
+              nurses in the area receive the alert, and the first to accept the request is assigned to the patient. The system enables real-time 
+              tracking, allowing patients, their families, and caregivers to monitor the nurse’s movements, while the nurse can view the patient’s 
+              location and current health status. Developed using <b className="purple">Android Studio, Arduino IDE, and Java,</b> the app ensures efficient communication 
+              between patients and nurses, enhancing response times and potentially saving lives. This system offers a transparent, rapid, and 
+              life-saving solution for home ICU patients, benefiting both the healthcare system and society.
+                "
+                 </>}
+                screenshots={[hn, hn1, hn2, hn3, hn4]}       />
+          </Col>
+          
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hri}
+              isBlog={false}
+              title="Can robots that incorporate music influence relaxation more effectively than robots without music?"
+              description="This study explores how music-integrated robots can enhance relaxation more effectively than non-musical robots, showing that participants interacting with music-equipped robots experienced deeper relaxation and better physiological responses. The findings highlight the potential of multi-sensory Human-Robot Interaction (HRI) for improved therapeutic outcomes."
+              extendedDescription={ <>"This study investigates the potential of music-integrated robots to enhance relaxation more effectively 
+              than robots without musical features, utilizing the <b className="purple">humanoid robot NAO and the Choregraphe software</b> for interaction design. 
+              Given the growing interest in <b className="purple">Human-Robot Interaction (HRI)</b> for therapeutic purposes and the well-documented soothing effects 
+              of music, the research was conducted through a controlled experiment involving participants who engaged with the NAO robot in 
+              conversational and game-based interactions. Participants were divided into two groups: one experienced these interactions with 
+              background music, while the other interacted without music. Measures of relaxation were assessed through subjective questionnaires 
+              and physiological indicators, such as heart rate variability. The analysis of results revealed that the presence of music 
+              significantly enhanced relaxation effects during robotic interactions; those exposed to music reported higher relaxation scores 
+              and exhibited improved physiological responses, including greater muscle relaxation and lower heart rates compared to their 
+              counterparts who interacted with the robot alone. This study underscores the <b className="purple">importance of integrating music</b> into robotic
+               interactions as a novel therapeutic technique, suggesting promising avenues for future robot design and therapeutic interventions 
+               aimed at improving user engagement and overall effectiveness in relaxation therapies."
+                 </>}
+                screenshots={[hri1]}       />
           </Col>
 
           <Col md={4} className="project-card">
@@ -131,6 +207,7 @@ the Metaverse means having access to a higher level of immersive and entertainin
               screenshots={[man]} // Multiple screenshots
             />
           </Col>
+         
 
           {/* Add more projects as needed */}
         </Row>
