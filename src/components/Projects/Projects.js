@@ -29,6 +29,11 @@ import hn4 from "../../Assets/Projects/hn4.png";
 import hri from "../../Assets/Projects/hri.jpg";
 import hri1 from "../../Assets/Projects/hri1.jpg";
 import hri2 from "../../Assets/Projects/hri2.png";
+import ar1 from "../../Assets/Projects/ar1.png";
+import ar2 from "../../Assets/Projects/ar2.png";
+import ar3 from "../../Assets/Projects/ar3.png";
+import ar4 from "../../Assets/Projects/ar4.png";
+
 
 function Projects() {
   return (
@@ -194,6 +199,28 @@ with a score of 90.5%. "
                aimed at improving user engagement and overall effectiveness in relaxation therapies."
                  </>}
                 screenshots={[hri1, hri2]}       />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ar1}
+              isBlog={false}
+              title="Assistive robots for elderly people with dementia"
+              description="The project focuses on designing assistive robots, Pepper and TurtleBot3, to help elderly individuals with dementia by providing emotional support, exercise guidance, and mobility assistance. These robots enhance safety and independence within home environments while addressing the unique challenges of dementia care."
+              extendedDescription={ <>"The project investigates the application of assistive robotics to improve the quality of life for elderly 
+              individuals suffering from dementia, using a persona named Phyllis as a case study. It focuses on two distinct 
+              robotic systems: <b className="purple">Pepper, a socially assistive robot, and TurtleBot3, a physically assistive robot.</b> Pepper is designed to engage
+               Phyllis in a seated exercise routine while providing emotional support, safety monitoring, and motivation to adhere to her exercise
+                regimen. Through personalized interactions, Pepper addresses Phyllis's emotional well-being by assessing her mood, offering
+                 encouragement, and utilizing calming techniques when necessary. On the other hand, TurtleBot3 is integrated with a walking 
+                 cane to assist Phyllis with mobility within her home, ensuring she can navigate safely and maintain her independence. 
+                 The study highlights the robots' capabilities in providing not only physical assistance but also essential social interaction, 
+                 emphasizing the importance of addressing both the emotional and physical needs of elderly individuals with dementia. 
+                 Overall, the findings demonstrate the potential of assistive robots to enhance safety, autonomy, and quality of life for 
+                 this vulnerable population while identifying key areas for future improvement in robotic technology and user experience."
+                 </>}
+                screenshots={[ar1, ar2, ar3, ar4]}
+                videoLink="https://www.youtube.com/embed/Tndyo_MYapw?si=7344ojn6aLeIALqq"     />
           </Col>
 
           <Col md={4} className="project-card">
