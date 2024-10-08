@@ -203,7 +203,7 @@ with a score of 90.5%. "
               title="Photo Manipulation"
               description="Experimented with various photo manipulation techniques in Adobe Photoshop."
               extendedDescription="This project involved transforming and altering images to create surreal effects using advanced Photoshop techniques.
-              It included layering, masking, and color correction to achieve the desired results. Some of the works were showcased in local art galleries."
+              It included layering, masking, and color correction to achieve the desired results. Some of the works are in the link."
               demoLink="https://drive.google.com/drive/folders/105ZYXbLZfuphz_K7euDmnQMvPW_iOAED?usp=sharing"
               screenshots={[man]} // Multiple screenshots
             />
