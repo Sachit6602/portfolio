@@ -28,6 +28,7 @@ import hn3 from "../../Assets/Projects/hn3.png";
 import hn4 from "../../Assets/Projects/hn4.png";
 import hri from "../../Assets/Projects/hri.jpg";
 import hri1 from "../../Assets/Projects/hri1.jpg";
+import hri2 from "../../Assets/Projects/hri2.png";
 
 function Projects() {
   return (
@@ -192,7 +193,7 @@ with a score of 90.5%. "
                interactions as a novel therapeutic technique, suggesting promising avenues for future robot design and therapeutic interventions 
                aimed at improving user engagement and overall effectiveness in relaxation therapies."
                  </>}
-                screenshots={[hri1]}       />
+                screenshots={[hri1, hri2]}       />
           </Col>
 
           <Col md={4} className="project-card">
