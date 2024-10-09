@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/dp1.png";
 import Tilt from "react-parallax-tilt";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -55,21 +56,16 @@ function Home2() {
               </i>
               I am eager to discuss how my skills can contribute to the success of your organization. Let's connect and inspire positive change together. 📊
             </p>
-            <div className="view-projects-container">
-              <li className="social-icons">
-              <h3>View My Skillset</h3>
-              <a href="/about" to="/about" className="icon-colour home-social-icons"> <FaArrowRight />
-              </a>
-              </li>
+            {/* Buttons */}
+            <div className="button-container">
+              <Link to="/about">
+                <button className="custom-btn">View My Skillset</button>
+              </Link>
+              <Link to="/projects">
+                <button className="custom-btn">View My Projects</button>
+              </Link>
             </div>
-            {/* View Projects Button */}
-            <div className="view-projects-container">
-              <li className="social-icons">
-              <h3>View My Projects</h3>
-              <a href="/projects" to="/project" className="icon-colour home-social-icons"> <FaArrowRight />
-              </a>
-              </li>
-            </div>
+            
 
            
             

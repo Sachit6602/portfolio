@@ -589,6 +589,36 @@ button:focus {
   color: #e0aaff;
   border-color: #e0aaff;
 }
+/* Button Styling */
+.button-container {
+  margin-top: 20px;
+}
+
+.custom-btn {
+  background-color: #6f42c1; /* Adjust to match your site's color scheme */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-right: 15px; /* Add space between buttons */
+}
+
+.custom-btn:hover {
+  background-color: #ffffff;
+  color: #6f42c1;
+  border: 2px solid #6c63ff;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:focus {
+  outline: none;
+}
 
 
 
@@ -689,13 +719,33 @@ button:focus {
   padding: 10px !important;
   opacity: 0.93 !important;
   border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
+  text-align: center;
   border-radius: 5px !important;
   display: table !important;
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  position: relative;
+}
+
+.tech-text {
+  display: none;
+  font-size: 0.9em;
+  color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.tech-icons:hover .tech-text {
+  display: block;
+}
+
+.tech-icons:hover {
+  transform: scale(1.05) !important;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 
 @media (max-width: 767px) {
@@ -704,15 +754,6 @@ button:focus {
   }
 }
 
-.tech-icons:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
-}
-.tech-icon-images {
-  padding: 20px !important;
-  line-height: 1.6 !important;
-}
 
 .quote-card-view {
   border: none !important;

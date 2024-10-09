@@ -33,6 +33,11 @@ import ar1 from "../../Assets/Projects/ar1.png";
 import ar2 from "../../Assets/Projects/ar2.png";
 import ar3 from "../../Assets/Projects/ar3.png";
 import ar4 from "../../Assets/Projects/ar4.png";
+import arvr1 from "../../Assets/Projects/arvr1.jpg";
+import arvr2 from "../../Assets/Projects/arvr2.jpg";
+import arvr3 from "../../Assets/Projects/arvr3.png";
+import arvr4 from "../../Assets/Projects/arvr4.jpg";
+import arvr5 from "../../Assets/Projects/arvr5.png";
 
 
 function Projects() {
@@ -135,6 +140,26 @@ the Metaverse means having access to a higher level of immersive and entertainin
     </>}
               screenshots={[meta, meta1, meta2, meta3, meta4]} // Multiple screenshots
               videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" // Example video link
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={arvr3}
+              isBlog={false}
+              title="Smart Education Application for Special Children using Augmented Reality"
+              description="This project consisted of developing an android application based on Unity and incorporating 3D models. It aimed at improvising the study environment of specially-abled students. "
+              extendedDescription={ <>"The project described involves developing an <b className="purple">Augmented Reality (AR)</b>-based educational ecosystem for specially-abled children. The AR application is 
+              designed using <b className="purple">Android Studio, with Unity for scene creation, Blender for building 3D models, and Vuforia Engine </b>for creating image targets. This mobile application, which 
+              operates offline, provides an inclusive learning experience through visually interactive 3D animations and auditory cues when specific images from educational materials are 
+              scanned. Firebase is used for user authentication, allowing students to log in, and administrators to manage content. Key modules include <b className="purple">AR Numbers, 
+              AR Alphabets (English, Tamil, Hindi), and AR Geometry, supporting a personalized and engaging learning environment.</b> This project aims to help specially-abled students 
+              learn independently through an immersive experience that can be accessed anytime, anywhere"
+ <br />
+ <br />
+ <b className="purple">Led the design and launch of Augmented Reality-based educational application impacting at least
+ 25 specially abled students, and showcased prototype to All-India Council for Technical Education in All-India Hackathon 2022.</b>
+    </>}
+              screenshots={[arvr1, arvr2, arvr3, arvr4, arvr5]} // Multiple screenshots
             />
           </Col>
           <Col md={4} className="project-card">

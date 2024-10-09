@@ -34,59 +34,75 @@ import { ReactComponent as ML } from '../../Icons/ml.svg';
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      
-       <Col xs={4} md={2} className="tech-icons">
-        <SiC />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCplusplus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-       <GiArtificialIntelligence />
-      </Col>  
-      <Col xs={4} md={2} className="tech-icons">
-       <ML />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <CV />
-      </Col>    
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHiveBlockchain />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFlask />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <BsFiletypeSql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <AiFillAndroid />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbAugmentedReality2 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-    </Row>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiC />
+      <span className="tech-text">C Language</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiCplusplus />
+      <span className="tech-text">C++</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiCsharp />
+      <span className="tech-text">C#</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <DiPython />
+      <span className="tech-text">Python</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <DiJavascript1 />
+      <span className="tech-text">JavaScript</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <DiJava />
+      <span className="tech-text">Java</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <DiHtml5 />
+      <span className="tech-text">HTML5</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <GiArtificialIntelligence />
+      <span className="tech-text">AI</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <ML />
+      <span className="tech-text">Machine Learning</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <CV />
+      <span className="tech-text">Computer Vision</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiHiveBlockchain />
+      <span className="tech-text">Blockchain</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiFlask />
+      <span className="tech-text">Flask</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <BsFiletypeSql />
+      <span className="tech-text">SQL</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <AiFillAndroid />
+      <span className="tech-text">Android</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <TbAugmentedReality2 />
+      <span className="tech-text">Augmented Reality</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <DiReact />
+      <span className="tech-text">React</span>
+    </Col>
+    <Col xs={4} md={2} className="tech-icons">
+      <SiNextdotjs />
+      <span className="tech-text">Next.js</span>
+    </Col>
+  </Row>
   );
 }
 
