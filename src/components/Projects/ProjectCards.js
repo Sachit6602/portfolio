@@ -15,37 +15,48 @@ function ProjectCards(props) {
     <>
       <Card className="project-card-view">
         <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-        <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text style={{ textAlign: "justify" }}>
-            {props.description}
-          </Card.Text>
+        <Card.Body className="d-flex flex-column justify-content-between text-center">
+  <div>
+    <Card.Title style={{ color: "white" }}>{props.title}</Card.Title>
+    <Card.Text style={{ textAlign: "justify", color: "white" }}>
+      {props.description}
+    </Card.Text>
+  </div>
 
-          {/* More Info Button */}
-          <Button
-            variant="info"
-            onClick={handleShow}
-            style={{ backgroundColor: "#00b4d8", border: "none" }}
-          >
-            More Info
-          </Button>
+  {/* More Info Button */}
+  <div className="mt-auto">  {/* This will push the button to the bottom */}
+    <Button
+      variant="info"
+      onClick={handleShow}
+      style={{
+        backgroundColor: "#6f42c1",
+        border: "none",
+        width: "350px", // Fixed width for consistency
+        color: "white", // Button text color
+      }}
+    >
+      More Info
+    </Button>
 
-          {/* Demo Link if available */}
-          {!props.isBlog && props.demoLink && (
-            <Button
-              variant="primary"
-              href={props.demoLink}
-              target="_blank"
-              style={{
-                marginLeft: "10px",
-                backgroundColor: "#6f42c1", // Purple background to match the theme
-                border: "none",
-              }}
-            >
-              <CgWebsite /> &nbsp; Link
-            </Button>
-          )}
-        </Card.Body>
+    {/* Demo Link if available */}
+    {!props.isBlog && props.demoLink && (
+      <Button
+        variant="primary"
+        href={props.demoLink}
+        target="_blank"
+        style={{
+          marginLeft: "10px",
+          backgroundColor: "#6f42c1",
+          border: "none",
+          width: "100px", // Fixed width to match the other button
+        }}
+      >
+        <CgWebsite /> &nbsp; Link
+      </Button>
+    )}
+  </div>
+</Card.Body>
+
       </Card>
 
       {/* Modal for More Info */}
@@ -58,7 +69,7 @@ function ProjectCards(props) {
         animation={true}
       >
         <Modal.Header closeButton closeVariant="white" style={{ borderBottom: "none" }}>
-          <Modal.Title style={{ color: "#e0aaff", fontSize: "1.5rem" }}>
+          <Modal.Title style={{ color: "#c770f0", fontSize: "1.5rem" }}>
             {props.title} - More Info
           </Modal.Title>
         </Modal.Header>

@@ -57,14 +57,7 @@ function Home2() {
               I am eager to discuss how my skills can contribute to the success of your organization. Let's connect and inspire positive change together. 📊
             </p>
             {/* Buttons */}
-            <div className="button-container">
-              <Link to="/about">
-                <button className="custom-btn">View My Skillset</button>
-              </Link>
-              <Link to="/projects">
-                <button className="custom-btn">View My Projects</button>
-              </Link>
-            </div>
+
             
 
            

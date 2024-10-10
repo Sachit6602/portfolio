@@ -24,19 +24,12 @@ function AboutCard() {
              between digital advancements and real-world needs.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            In addition to my technical expertise, I've delved into the field of<span className="purple"> machine learning,</span> applying 
+            AI-driven solutions to healthcare, such as predicting heart disease using advanced classifiers. This has reinforced my belief 
+            in the power of technology to address critical challenges in multiple domains, and I am eager to bring this interdisciplinary 
+            approach to my <span className="purple">future endeavors.</span>
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Playing Sports
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
+
           <br />
           <br />
           <p style={{ textAlign: "justify" }}> 
