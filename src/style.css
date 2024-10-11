@@ -713,31 +713,33 @@ button:focus {
   color: white !important;
 }
 
+/* Tech Icons Styling */
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
-  padding: 10px !important;
+  padding: 20px !important;
   opacity: 0.93 !important;
   border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
   text-align: center;
   border-radius: 5px !important;
-  display: table !important;
+  display: flex !important;
+  flex-direction: column; /* Arrange icon and text in a column */
+  align-items: center;    /* Center-align horizontally */
+  justify-content: center; /* Center-align vertically */
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
   position: relative;
 }
 
+/* Styling for the text */
 .tech-text {
-  display: none;
-  font-size: 0.9em;
-  color: #fff;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+  font-size: 0.2em; /* Adjust font size relative to icon */
+  color: #fff; /* Contrasting color for visibility */
+  margin-top: 10px; /* Space between icon and text */
+  display: block;
 }
+
 
 .tech-icons:hover .tech-text {
   display: block;
