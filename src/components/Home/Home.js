@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -9,7 +9,18 @@ import { IoCloudDownload } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+
 function Home() {
+  function closePopup() {
+    document.getElementById("mobilePopup").style.display = "none";
+  }
+  
+  useEffect(() => {
+    // If it's a mobile device, show the popup
+    if (window.innerWidth <= 1000) {
+      document.getElementById("mobilePopup").style.display = "flex";
+    }
+  }, []);
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -38,7 +49,7 @@ function Home() {
     <Spline scene="https://prod.spline.design/nzTQrHmwHUmTO8GW/scene.splinecode" />
   </Col>
 
-  <Col md={5} style={{ textAlign: "right", paddingTop: "150px" }}>
+  <Col md={5} className="home-header2">
   <h1>Download My CV</h1>
 <div className="cv-download-container">
   <li className="social-icons">
@@ -114,9 +125,21 @@ function Home() {
 
         </Container>
       </Container>
+      {/* Modal Popup */}
+      <div id="mobilePopup" className="mobile-popup">
+        <div className="popup-content">
+          <h2>Use PC for a better experience!</h2>
+          <button onClick={closePopup} className="close-btn">
+            OK
+          </button>
+        </div>
+      </div>
+      
       <Home2 />
     </section>
   );
 }
+
+
 
 export default Home;

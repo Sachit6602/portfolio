@@ -261,6 +261,11 @@ button:focus {
   padding-top: 80px !important;
 }
 
+.home-header2 {
+  text-align: right;
+  padding-top: 150px !important;
+}
+
 
 .home-section {
   position: relative;
@@ -306,6 +311,10 @@ button:focus {
 @media (max-width: 1000px) {
    .home-header {
     padding-top: 60px !important; /* Reduce top padding on mobile */
+  }
+
+  .home-header2 {
+    padding-top: 80px !important;
   }
 
   .home-section {
@@ -466,6 +475,19 @@ button:focus {
 
   .spline-container {
     visibility: hidden;
+  }
+
+  .cv-download-container,
+  .home-about-social-links {
+    display: flex;
+    justify-content: center; /* Center-align the icons horizontally */
+    padding-top: 10px; /* Space between CV download and social icons */
+  }
+
+  .cv-download-container li,
+  .home-about-social-links li {
+    display: inline-block;
+    margin: 5px 10px; /* Add spacing between icons */
   }
 
   .home-social-icons {
@@ -980,3 +1002,51 @@ button:focus {
 }
 
 
+/* Modal Popup Styles */
+.mobile-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.popup-content h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #cd5ff8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #b562d6;
+}
+
+/* Show the popup only for mobile devices */
+@media (max-width: 1000px) {
+  .mobile-popup {
+    display: flex; /* Show the modal on mobile */
+  }
+}
