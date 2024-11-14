@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/dp1.png";
+import myImg from "../../Assets/dp2.png";
 import Tilt from "react-parallax-tilt";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";

@@ -6,3 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
 }
+
+@media screen and (max-width:1200px){
+  body{
+    overflow:visible;
+  }
+  
+}

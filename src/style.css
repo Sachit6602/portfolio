@@ -140,7 +140,7 @@ button:focus {
   opacity: 0.9 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
@@ -174,7 +174,7 @@ button:focus {
   padding: 0.8rem 1rem !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
   }
@@ -261,6 +261,7 @@ button:focus {
   padding-top: 80px !important;
 }
 
+
 .home-section {
   position: relative;
   z-index: 1;
@@ -302,11 +303,41 @@ button:focus {
   color: #b562d6 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
+   .home-header {
+    padding-top: 60px !important; /* Reduce top padding on mobile */
+  }
+
+  .home-section {
+    padding-top: 20px !important; /* Adjust padding */
+    padding-bottom: 20px !important; /* Adjust padding */
+  }
+
+  .home-content {
+    padding: 3rem 0 1rem !important; /* Reduce padding */
+    text-align: center; /* Center-align text on mobile */
+  }
+
+  .heading {
+    font-size: 1.8em !important; /* Reduce font size */
+    padding-left: 20px !important; /* Adjust padding */
+    padding-right: 20px !important; /* Add right padding */
+  }
+
+  .heading-name {
+    font-size: 1.2em !important; /* Reduce font size */
+    padding-left: 20px !important; /* Adjust padding */
+    padding-right: 20px !important; /* Add right padding */
+  }
+
+  .main-name {
+    font-size: 1.5em !important; /* Adjust main name font size */
+  }
   .Typewriter__wrapper {
     font-size: 1.4em !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     position: absolute !important;
+    padding-bottom: 200px;
   }
   .Typewriter__cursor {
     display: none !important;
@@ -318,9 +349,9 @@ button:focus {
   padding-top: 15em !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .myAvtar {
-    padding-top: 2em !important;
+    padding-top: 1em !important;
     padding-bottom: 2em !important;
   }
 }
@@ -335,7 +366,7 @@ button:focus {
 
 .home-about-description {
   color: white !important;
-  padding-top: 100px !important;
+  padding-top: 10px !important;
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -422,6 +453,36 @@ button:focus {
   padding-right: 15px;
   padding-left: 15px;
 }
+@media (max-width: 1000px) {
+  .home-about-section {
+    padding-top: 100px; /* Reduce top padding */
+    padding-bottom: 20px; /* Reduce bottom padding */
+  }
+
+  .home-about-description {
+    padding-top: 200px !important; /* Adjust spacing for mobile */
+    text-align: center;
+  }
+
+  .spline-container {
+    visibility: hidden;
+  }
+
+  .home-social-icons {
+    width: 35px !important;  /* Slightly smaller icons on mobile */
+    height: 35px !important;  /* Slightly smaller icons on mobile */
+    font-size: 1.1em !important;  /* Smaller font size */
+    line-height: 1.8em !important; /* Adjust line height */
+  }
+
+  .social-icons {
+    padding-right: 10px !important;  /* Adjust padding for icons */
+    padding-left: 10px !important;  /* Adjust padding for icons */
+  }
+}
+
+
+
 
 .icon-colour {
   color: #700c86 !important;
@@ -470,7 +531,7 @@ button:focus {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .view-projects-button {
     font-size: 14px; /* Smaller font size for mobile */
     padding: 10px 20px; /* Adjust padding */
@@ -496,7 +557,7 @@ button:focus {
   text-align: center !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .footer-copywright {
     text-align: center !important;
   }
@@ -750,7 +811,7 @@ button:focus {
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .tech-icons {
     margin: 10px !important;
   }
@@ -769,7 +830,7 @@ button:focus {
   padding-left: 1px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .about-img {
     padding-top: 0 !important;
   }
@@ -800,7 +861,7 @@ button:focus {
   padding-left: 80px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .resume-left {
     padding-right: 15px !important;
     padding-left: 15px !important;
@@ -917,3 +978,5 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+
