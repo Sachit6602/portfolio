@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import Spline from "@splinetool/react-spline";
-import { AiFillGithub, AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub, AiOutlineWhatsApp, AiFillInstagram, AiOutlineArrowRight } from "react-icons/ai";
 import { IoCloudDownload } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -45,7 +46,9 @@ function Home() {
     </div>
   </Col>
 
-  <Col md={5} className="spline-container" style={{ paddingBottom: 0, textAlign: "right", paddingLeft: "50px" }}>
+  
+
+  <Col md={5} className="spline-container" style={{ paddingBottom: "100px", textAlign: "right", paddingLeft: "50px", overflow: "hidden", height: "650px" }}>
     <Spline scene="https://prod.spline.design/nzTQrHmwHUmTO8GW/scene.splinecode" />
   </Col>
 
@@ -61,6 +64,8 @@ function Home() {
       <IoCloudDownload /> 
     </a>
   </li>
+
+  
 
 </div>
     <h2 style={{ paddingTop: '125px' }}>
@@ -121,6 +126,40 @@ function Home() {
     </ul>
   </Col>
 </Row>
+
+<div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "50px" }}>
+  {/* About Button */}
+  <div style={{ display: "flex", alignItems: "center", marginRight: "50px" }}> {/* Added marginRight to create gap */}
+    <span style={{ fontSize: "1.5rem", marginRight: "1px", color: "#c770f0" }}>Explore my background and skills</span>
+    <li className="social-icons">
+      <Link
+        to="/about#techstack" // Navigate smoothly without reload
+        className="icon-colour home-social-icons"
+      >
+        <AiOutlineArrowRight style={{ fontSize: "2rem" }} />
+      </Link>
+    </li>
+  </div>
+
+  {/* Projects Button */}
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <span style={{ fontSize: "1.5rem",marginLeft: "50px", marginRight: "1px", color: "#c770f0" }}>Check out my projects</span>
+    <li className="social-icons">
+      <Link
+        to="/project" // Navigate smoothly without reload
+        className="icon-colour home-social-icons"
+      >
+        <AiOutlineArrowRight style={{ fontSize: "2rem" }} />
+      </Link>
+    </li>
+  </div>
+</div>
+
+
+
+
+
+
 
 
         </Container>

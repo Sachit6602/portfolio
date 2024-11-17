@@ -17,6 +17,7 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
+          
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
@@ -56,7 +57,7 @@ function Home2() {
               </i>
               I am eager to discuss how my skills can contribute to the success of your organization. Let's connect and inspire positive change together. 📊
             </p>
-            {/* Buttons */}
+            
 
             
 
@@ -68,6 +69,7 @@ function Home2() {
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
+          
         </Row>
         <Row>
         </Row>
