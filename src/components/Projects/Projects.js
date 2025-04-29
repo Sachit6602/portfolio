@@ -38,6 +38,8 @@ import arvr2 from "../../Assets/Projects/arvr2.jpg";
 import arvr3 from "../../Assets/Projects/arvr3.png";
 import arvr4 from "../../Assets/Projects/arvr4.jpg";
 import arvr5 from "../../Assets/Projects/arvr5.png";
+import path1 from "../../Assets/Projects/path1.png";
+import path2 from "../../Assets/Projects/path2.png";
 
 
 function Projects() {
@@ -120,6 +122,30 @@ accuracy"
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={path1}
+              isBlog={false}
+              title="Maze Solving Robot with Path-Planning"
+              description=" Developed a maze-solving differential drive robot simulation in ROS2 using Docker, featuring computer vision-based localization, path planning, and full integration with Gazebo, RViz, and OpenCV"
+              extendedDescription={ <>"As part of my exploration into <b className="purple">robotics</b> and <b className="purple">computer vision</b>, I developed a maze-solving robot entirely in a simulated environment 
+              using <b className="purple">ROS2, Gazebo,</b> and <b className="purple">OpenCV.</b> What makes this project unique is that I built and ran the entire system on Windows using <b className="purple">Docker</b> — a setup that required overcoming several 
+              technical challenges around containerization, ROS2 compatibility, and simulation performance.
+              <br />
+              <br />
+              For movement, I integrated the <b className="purple">gazebo_ros_diff_drive plugin,</b> which handled low-level wheel control based on velocity commands.For perception, 
+              I applied <b className="purple">OpenCV</b> for background extraction to support basic localization. In the planning phase, I implemented pathfinding algorithms including 
+              <b className="purple">A*, Dijkstra,</b> and <b className="purple">DFS</b> using a graph-based maze map, along with a <b className="purple">Min Heap-based priority queue</b> for optimized search. The robot followed paths using a Go-To-Goal (GTG) behavior with obstacle avoidance.
+
+              This project gave me practical experience applying core robotics concepts in a full simulation loop. 
+              It improved my understanding of ROS2, vision-based planning, and containerized robotics development."
+                 </>}
+                screenshots={[path1, path2]}
+                videoLink="https://www.youtube.com/embed/XMbLFwThgpo?si=CG9h0Kb72chyGLAT"       />
+
+
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={meta}
               isBlog={false}
               title="Metaverse-induced E-Commerce Web Application"
@@ -139,7 +165,7 @@ the Metaverse means having access to a higher level of immersive and entertainin
   Conference on Intelligent Computing) and secured publication in Scopus-indexed journal.</b>
     </>}
               screenshots={[meta, meta1, meta2, meta3, meta4]} // Multiple screenshots
-              videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" // Example video link
+              videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" 
             />
           </Col>
           <Col md={4} className="project-card">
