@@ -18,6 +18,7 @@ import {
   SiPycharm,
   SiJupyter,
   SiArduino,
+  SiDocker
 } from "react-icons/si";
 import { ReactComponent as MatLab } from '../../Icons/matlab.svg';
 import { ReactComponent as Gazebo } from '../../Icons/gazebo.svg';
@@ -29,7 +30,7 @@ function Toolstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <ROS />
-        <div className="tech-text">ROS</div>
+        <div className="tech-text">ROS2</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <Gazebo />
@@ -38,10 +39,6 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <MatLab />
         <div className="tech-text">MATLAB</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiArduino />
-        <div className="tech-text">Arduino</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiGooglecolab />
@@ -54,6 +51,14 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiJupyter />
         <div className="tech-text">Jupyter</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiDocker />
+        <div className="tech-text">Docker</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiArduino />
+        <div className="tech-text">Arduino</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
