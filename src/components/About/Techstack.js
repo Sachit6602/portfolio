@@ -6,7 +6,7 @@ import { AiOutlineVideoCameraAdd, AiFillAndroid } from "react-icons/ai";
 import { MdDesignServices } from "react-icons/md";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { BsFiletypeSql } from "react-icons/bs";
-import { SiFlask } from "react-icons/si";
+import { SiFlask, SiOpencv  } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
@@ -55,6 +55,10 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
         <div className="tech-text">Java</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiOpencv />
+        <div className="tech-text">OpenCV</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiHtml5 />
