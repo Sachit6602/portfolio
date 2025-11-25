@@ -40,6 +40,14 @@ import arvr4 from "../../Assets/Projects/arvr4.jpg";
 import arvr5 from "../../Assets/Projects/arvr5.png";
 import path1 from "../../Assets/Projects/path1.png";
 import path2 from "../../Assets/Projects/path2.png";
+import sign1 from "../../Assets/Projects/sign1.jpg";
+import sign2 from "../../Assets/Projects/sign2.png";
+import sign3 from "../../Assets/Projects/sign3.png";
+import sign4 from "../../Assets/Projects/sign4.png";
+import sign5 from "../../Assets/Projects/sign5.png";
+import sign6 from "../../Assets/Projects/sign6.png";
+import sign7 from "../../Assets/Projects/sign7.png";
+import sign8 from "../../Assets/Projects/sign8.png";
 
 
 function Projects() {
@@ -142,6 +150,33 @@ accuracy"
                 videoLink="https://www.youtube.com/embed/XMbLFwThgpo?si=CG9h0Kb72chyGLAT"       />
 
 
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={sign1}
+              isBlog={false}
+              title="Sign Language Recognition"
+              description="Developing a YOLO-based object detection pipeline in PyTorch for real-time sign language recognition, 
+with emphasis on dataset curation, model generalisation, and benchmarking (CNN, YOLO, Transformers) 
+to enhance accessibility and human–computer interaction.  "
+extendedDescription={ <>"I have been developing a real-time sign language recognition system using a YOLO-based object detection pipeline built in PyTorch. Before settling on YOLO, I explored a range of architectures—including classical CNNs and more advanced models such as DeTR—to compare accuracy, inference speed, and generalisation performance. After extensive benchmarking, YOLO consistently delivered the best balance of precision and real-time responsiveness, making it the most suitable for accessibility-focused applications. The project began with a limited set of letters and gestures, but the pipeline is fully scalable and can be expanded to cover a broader vocabulary with additional data and fine-tuning.
+
+  A significant part of the project involved dataset preparation, where I curated and annotated custom samples, applied augmentation techniques, and implemented generalisation strategies to ensure robustness across different lighting conditions, hand shapes, skin tones, and backgrounds. This iterative approach allowed me to refine the model’s performance and reliability over multiple evaluation cycles.
+  <br />
+ <br />
+  For deployment, I containerised the trained model using Docker and deployed it on AWS ECS (Elastic Container Service)—my first full end-to-end deployment on AWS. Through this process, I gained practical experience configuring ECS tasks, setting up container registries, managing networking, and handling inference endpoints in a cloud environment. The model is served via FastAPI, enabling low-latency requests suitable for real-time interaction.
+  <br />
+ <br />
+  Because AWS ECS public endpoints do not provide HTTPS by default, they cannot access a user’s webcam directly in the browser. To work around this, I used ngrok to create a secure HTTPS tunnel for testing, which allowed me to run real-time webcam inference externally while maintaining full functionality. This provided an effective testing environment and ensured the model behaved consistently across deployment setups.
+  <br />
+ <br />
+  Overall, this project strengthened my experience in model development, benchmarking, dataset curation, cloud deployment, containerisation, and real-time accessibility applications—laying the groundwork for a scalable sign language recognition platform."
+ <br />
+ <br />
+    </>}
+              screenshots={[sign2, sign3, sign4, sign5, sign6, sign7, sign8]} 
+              videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" 
+            />
           </Col>
 
           <Col md={4} className="project-card">
