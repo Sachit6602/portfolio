@@ -175,7 +175,7 @@ extendedDescription={ <>"I have been developing a real-time sign language recogn
  <br />
     </>}
               screenshots={[sign2, sign3, sign4, sign5, sign6, sign7, sign8]} 
-              videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" 
+
             />
           </Col>
 
