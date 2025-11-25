@@ -153,7 +153,7 @@ accuracy"
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={sign1}
+              imgPath={sign2}
               isBlog={false}
               title="Sign Language Recognition"
               description="Developing a YOLO-based object detection pipeline in PyTorch for real-time sign language recognition, 
