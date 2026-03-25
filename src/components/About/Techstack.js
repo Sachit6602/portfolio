@@ -1,10 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import { TbPhotoEdit, TbAugmentedReality2 } from "react-icons/tb";
-import { AiOutlineVideoCameraAdd, AiFillAndroid } from "react-icons/ai";
-import { MdDesignServices } from "react-icons/md";
-import { IoLogoGameControllerB } from "react-icons/io";
+import { TbAugmentedReality2 } from "react-icons/tb";
+import { AiFillAndroid } from "react-icons/ai";
 import { BsFiletypeSql } from "react-icons/bs";
 import { SiFlask, SiOpencv, SiPytorch, SiTensorflow, SiKeras } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
@@ -14,10 +11,7 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import {
   DiJavascript1,
   DiReact,
-  DiNodejs,
-  DiMongodb,
   DiPython,
-  DiGit,
   DiJava,
   DiHtml5,
 } from "react-icons/di";
@@ -27,7 +21,6 @@ import {
   SiC,
   SiCsharp,
   SiLangchain,
-  SiLanggraph,
   SiCplusplus,
 } from "react-icons/si";
 import { ReactComponent as CV } from '../../Icons/cv.svg';

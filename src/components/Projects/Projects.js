@@ -40,7 +40,6 @@ import arvr4 from "../../Assets/Projects/arvr4.jpg";
 import arvr5 from "../../Assets/Projects/arvr5.png";
 import path1 from "../../Assets/Projects/path1.png";
 import path2 from "../../Assets/Projects/path2.png";
-import sign1 from "../../Assets/Projects/sign1.jpg";
 import sign2 from "../../Assets/Projects/sign2.png";
 import sign3 from "../../Assets/Projects/sign3.png";
 import sign4 from "../../Assets/Projects/sign4.png";
