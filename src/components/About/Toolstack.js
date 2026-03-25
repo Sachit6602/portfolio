@@ -18,6 +18,8 @@ import {
   SiPycharm,
   SiJupyter,
   SiArduino,
+  SiRailway,
+  SiSupabase,
   SiDocker
 } from "react-icons/si";
 import { ReactComponent as MatLab } from '../../Icons/matlab.svg';
@@ -63,6 +65,18 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
         <div className="tech-text">VS Code</div>
+      </Col>
+            <Col xs={4} md={2} className="tech-icons">
+        <SiVercel />
+        <div className="tech-text">Vercel</div>
+      </Col>
+            <Col xs={4} md={2} className="tech-icons">
+        <SiRailway />
+        <div className="tech-text">Railway</div>
+      </Col>
+                  <Col xs={4} md={2} className="tech-icons">
+        <SiSupabase />
+        <div className="tech-text">Supabase</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiAndroidstudio />

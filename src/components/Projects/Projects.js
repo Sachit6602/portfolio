@@ -48,6 +48,19 @@ import sign5 from "../../Assets/Projects/sign5.png";
 import sign6 from "../../Assets/Projects/sign6.png";
 import sign7 from "../../Assets/Projects/sign7.png";
 import sign8 from "../../Assets/Projects/sign8.png";
+import fxf from "../../Assets/Projects/fxf.png";
+import fxf1 from "../../Assets/Projects/fxf1.png";
+import fxf2 from "../../Assets/Projects/fxf2.png";
+import fxf3 from "../../Assets/Projects/fxf3.png";
+import fxf4 from "../../Assets/Projects/fxf4.png";
+import fxf5 from "../../Assets/Projects/fxf5.png";
+import fxf6 from "../../Assets/Projects/fxf6.png";
+import fxf7 from "../../Assets/Projects/fxf7.png";
+import nut from "../../Assets/Projects/nut.png";
+import nut1 from "../../Assets/Projects/nut1.png";
+import nut2 from "../../Assets/Projects/nut2.png";
+import nut3 from "../../Assets/Projects/nut3.png";
+import nut4 from "../../Assets/Projects/nut4.png";
 
 
 function Projects() {
@@ -90,42 +103,19 @@ and C++"
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pol}
+              imgPath={fxf}
               isBlog={false}
-              title="Indoor Spatial Understanding with Pololu Robot"
-              description=" Enhanced functionality of bump sensor for room dimension analysis and indoor navigation in robotics, 
-employing algorithms developed in embedded C using Arduino to estimate contact angles, with 95%
-accuracy"
-              extendedDescription={ <>"The goal of this work is to maximize sensor utility over traditional mapping as it explores the usage of 
-              bump sensors in robotics for indoor space understanding. We challenge the conventional dependence on broad spatial mapping by 
-              introducing a method to estimate the angle of obstacle contact using bump sensor data. Initial evaluations examine this method's 
-              efficiency and scope, exposing the boundaries of accuracy for obstacle placement. In a practical example, a robot traverses a small 
-              environment(ex: rectangle box) and records the distances of edges, angles of corners to calculate the <b className="purple">dimensions of the environment</b> 
-              In order to improve indoor navigation without requiring complex mapping, the research focuses on the analysis of sensor data, 
-              including activation levels and calculations for the environment. Using innovative sensors and algorithms, this research highlights
-               the fundamental potential of robots in environmental <b className="purple">analysis and automation.</b>"
-               </>}
-              screenshots={[pol, pol1,]} // Multiple screenshots
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={apple1}
-              isBlog={false}
-              title="Apple Counting in Orchards"
-              description=" Developed machine vision algorithms using Python, OpenCV, and TensorFlow for automated apple counting, achieving 82% detection accuracy through CNNs and R-CNNs while integrating advanced camera systems for enhanced yield estimation and harvesting efficiency."
-              extendedDescription={ <>"This research aims to enhance agricultural automation by developing a robust system for <b className="purple">detecting, counting,
-               and localizing apples in orchards using visual sensors.</b> Two primary approaches are explored: a traditional machine vision technique 
-               leveraging  <b className="purple">edge detection</b>, and a deep learning-based approach using the  <b className="purple">YOLOv7 model</b>. The performance of both methods is evaluated 
-               against the MinneApple dataset, which includes diverse images of apples at various ripeness levels and orchard conditions. 
-               The machine vision approach employs Canny edge detection for apple identification, achieving a count accuracy of 62.3%. 
-               In contrast, the YOLOv7 deep learning model demonstrates superior performance with a count accuracy of 82.46%, precision of 92.6%, 
-               and recall of 84.7%. The results indicate that while traditional methods are effective in certain scenarios, deep learning models
-                provide a more accurate and adaptable solution for apple counting in complex orchard environments. Future work will focus on 
-                refining the model, expanding the dataset, and improving detection accuracy under diverse conditions."
+              title="FixFlow - AI Quoting Agent for Trade Businesses"
+              description=" Autonomous AI quoting agent that handles the full trades business workflow end-to-end in under 60 seconds, with no human in the loop. Built with LangGraph and Civic MCP"
+              extendedDescription={ <>"<b className="purple">FixFlow</b> is an autonomous AI quoting agent for emergency trades businesses, built on a cyclic <b className="purple">LangGraph</b> state machine with 11 nodes that handles the full customer workflow — symptom diagnosis, job classification, live availability, dynamic pricing, negotiation, and authority enforcement — end-to-end in under 60 seconds, with no human in the loop. The agent is powered by <b className="purple">Claude Haiku</b> (via OpenRouter), traced node-by-node through <b className="purple">LangSmith</b>, and persisted across sessions via <b className="purple">Supabase</b>. Safety and scope enforcement are structural, not prompt-based — gas leak detection triggers a hard stop before any downstream node fires, and authority limits are fully deterministic. Integrations include <b className="purple">Civic MCP</b> for prompt injection defence and live Google Calendar availability, and <b className="purple">Luffa</b> for WhatsApp-based customer interaction. The entire business logic — pricing rules, supported brands, coverage zones, authority thresholds — lives in a single config file, meaning the same architecture can be redeployed for any trades business with zero code changes. Built with <b className="purple">FastAPI</b> on the backend and a <b className="purple">Next.js</b> dashboard for admin visibility.
+              <br />
+                <br /> 
+                🏆<b className="purple"> FixFlow was built over a 48-hour weekend at AI London 2026, a hackathon hosted by Encode Club. It won 1st Place in the "Add Guardrails to Your AI Agent" track and Runner-up in the "Build on Luffa — LuffaNation (Blockchain x AI x Business Track)".</b>"
                  </>}
-                screenshots={[apple1, apple2, apple3, apple4]}       />
+                screenshots={[fxf, fxf1, fxf2, fxf3, fxf4, fxf5, fxf6, fxf7 ]}
+                videoLink="https://www.youtube.com/embed/pt8guKIj-v4?si=dqwDrr4piDyrPuvS"       />
+
+
           </Col>
 
           <Col md={4} className="project-card">
@@ -151,6 +141,62 @@ accuracy"
 
 
           </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pol}
+              isBlog={false}
+              title="Indoor Spatial Understanding with Pololu Robot"
+              description=" Enhanced functionality of bump sensor for room dimension analysis and indoor navigation in robotics, 
+employing algorithms developed in embedded C using Arduino to estimate contact angles, with 95%
+accuracy"
+              extendedDescription={ <>"The goal of this work is to maximize sensor utility over traditional mapping as it explores the usage of 
+              bump sensors in robotics for indoor space understanding. We challenge the conventional dependence on broad spatial mapping by 
+              introducing a method to estimate the angle of obstacle contact using bump sensor data. Initial evaluations examine this method's 
+              efficiency and scope, exposing the boundaries of accuracy for obstacle placement. In a practical example, a robot traverses a small 
+              environment(ex: rectangle box) and records the distances of edges, angles of corners to calculate the <b className="purple">dimensions of the environment</b> 
+              In order to improve indoor navigation without requiring complex mapping, the research focuses on the analysis of sensor data, 
+              including activation levels and calculations for the environment. Using innovative sensors and algorithms, this research highlights
+               the fundamental potential of robots in environmental <b className="purple">analysis and automation.</b>"
+               </>}
+              screenshots={[pol, pol1,]} // Multiple screenshots
+            />
+          </Col>
+                              <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={nut}
+              isBlog={false}
+              title="AI nutrition coach for personalized diet planning"
+              description="Full-stack AI-powered meal planning and nutrition tracker with personalised calorie targets, recipe analysis, and weekly coaching insights. Built with React 18, Node.js, Supabase, and OpenRouter API, deployed across Vercel + Railway."
+              extendedDescription={ <>"Nutrition App is a full-stack personal nutrition and meal planning platform that computes personalised calorie and macro targets from user profiles (BMR/TDEE-based), and uses AI to generate tailored meal plans, analyse recipe URLs, and deliver weekly coaching insights. Built with <b className="purple">React 18 + Vite + Tailwind CSS</b> on the frontend and <b className="purple">Node.js + Express (ESM)</b> on the backend, with <b className="purple">PostgreSQL via Supabase</b> for data persistence and cookie-based session auth using <b className="purple">express-session</b> and <b className="purple">bcryptjs</b>. AI features — meal planning, recipe analysis, and coaching — are powered by <b className="purple">OpenRouter (Perplexity sonar-pro)</b>, with robust fallback handling for malformed model outputs. Users can also snap a photo of any meal to extract a recipe, or photograph a food item to instantly calculate its nutritional values — making logging as frictionless as possible. Deployed with the frontend on <b className="purple">Vercel</b>, backend on <b className="purple">Railway</b>, and database on <b className="purple">Supabase</b>, with CORS and secure cross-site cookies configured for production.
+              <br />
+                <br /> 
+<b className="purple">🌱 A personal side project built to explore full-stack AI integration — combining deterministic nutrition logic with LLM-driven meal planning, image-based food recognition, and behavioural coaching in a single cohesive product.</b>"
+                 </>}
+                screenshots={[nut, nut1, nut2, nut3, nut4]}       />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={apple1}
+              isBlog={false}
+              title="Apple Counting in Orchards"
+              description=" Developed machine vision algorithms using Python, OpenCV, and TensorFlow for automated apple counting, achieving 82% detection accuracy through CNNs and R-CNNs while integrating advanced camera systems for enhanced yield estimation and harvesting efficiency."
+              extendedDescription={ <>"This research aims to enhance agricultural automation by developing a robust system for <b className="purple">detecting, counting,
+               and localizing apples in orchards using visual sensors.</b> Two primary approaches are explored: a traditional machine vision technique 
+               leveraging  <b className="purple">edge detection</b>, and a deep learning-based approach using the  <b className="purple">YOLOv7 model</b>. The performance of both methods is evaluated 
+               against the MinneApple dataset, which includes diverse images of apples at various ripeness levels and orchard conditions. 
+               The machine vision approach employs Canny edge detection for apple identification, achieving a count accuracy of 62.3%. 
+               In contrast, the YOLOv7 deep learning model demonstrates superior performance with a count accuracy of 82.46%, precision of 92.6%, 
+               and recall of 84.7%. The results indicate that while traditional methods are effective in certain scenarios, deep learning models
+                provide a more accurate and adaptable solution for apple counting in complex orchard environments. Future work will focus on 
+                refining the model, expanding the dataset, and improving detection accuracy under diverse conditions."
+                 </>}
+                screenshots={[apple1, apple2, apple3, apple4]}       />
+          </Col>
+
+          
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={sign2}

@@ -10,6 +10,7 @@ import { SiFlask, SiOpencv, SiPytorch, SiTensorflow, SiKeras } from "react-icons
 import { SiNextdotjs } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
+
 import {
   DiJavascript1,
   DiReact,
@@ -20,10 +21,13 @@ import {
   DiJava,
   DiHtml5,
 } from "react-icons/di";
+import { FaProjectDiagram } from "react-icons/fa";
 import {
   SiHiveBlockchain,
   SiC,
   SiCsharp,
+  SiLangchain,
+  SiLanggraph,
   SiCplusplus,
 } from "react-icons/si";
 import { ReactComponent as CV } from '../../Icons/cv.svg';
@@ -55,6 +59,14 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
         <div className="tech-text">Java</div>
+      </Col>
+            <Col xs={4} md={2} className="tech-icons">
+        <SiLangchain />
+        <div className="tech-text">LangChain</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaProjectDiagram />
+        <div className="tech-text">LangGraph</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiOpencv />
