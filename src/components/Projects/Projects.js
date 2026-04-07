@@ -55,6 +55,7 @@ import fxf4 from "../../Assets/Projects/fxf4.png";
 import fxf5 from "../../Assets/Projects/fxf5.png";
 import fxf6 from "../../Assets/Projects/fxf6.png";
 import fxf7 from "../../Assets/Projects/fxf7.png";
+import fxfg from "../../Assets/Projects/fxfg.png";
 import nut from "../../Assets/Projects/nut.png";
 import nut1 from "../../Assets/Projects/nut1.png";
 import nut2 from "../../Assets/Projects/nut2.png";
@@ -111,7 +112,7 @@ and C++"
                 <br /> 
                 🏆<b className="purple"> FixFlow was built over a 48-hour weekend at AI London 2026, a hackathon hosted by Encode Club. It won 1st Place in the "Add Guardrails to Your AI Agent" track and Runner-up in the "Build on Luffa — LuffaNation (Blockchain x AI x Business Track)".</b>"
                  </>}
-                screenshots={[fxf, fxf1, fxf2, fxf3, fxf4, fxf5, fxf6, fxf7 ]}
+                screenshots={[fxf, fxfg, fxf1, fxf2, fxf3, fxf4, fxf5, fxf6, fxf7 ]}
                 videoLink="https://www.youtube.com/embed/pt8guKIj-v4?si=dqwDrr4piDyrPuvS"       />
 
 
