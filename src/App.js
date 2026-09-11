@@ -12,6 +12,7 @@ import {
   Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import { MotionConfig } from "motion/react";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <Router>
+      <MotionConfig reducedMotion="user">
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
@@ -41,8 +43,9 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
-        
+
       </div>
+      </MotionConfig>
     </Router>
   );
 }
