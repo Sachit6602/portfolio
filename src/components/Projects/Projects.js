@@ -1,8 +1,10 @@
 // Projects.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "motion/react";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import { reveal } from "../Reveal";
 import dock from "../../Assets/Projects/dock.png";
 import dock1 from "../../Assets/Projects/dock1.png";
 import dock2 from "../../Assets/Projects/dock2.png";
@@ -61,6 +63,12 @@ import nut1 from "../../Assets/Projects/nut1.png";
 import nut2 from "../../Assets/Projects/nut2.png";
 import nut3 from "../../Assets/Projects/nut3.png";
 import nut4 from "../../Assets/Projects/nut4.png";
+import agent1 from "../../Assets/Projects/agent1.png";
+import agent2 from "../../Assets/Projects/agent2.png";
+import agent3 from "../../Assets/Projects/agent3.png";
+import agent4 from "../../Assets/Projects/agent4.png";
+import agent5 from "../../Assets/Projects/agent5.png";
+import agent6 from "../../Assets/Projects/agent6.png";
 
 
 function Projects() {
@@ -68,14 +76,33 @@ function Projects() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <motion.div {...reveal()}>
+          <h1 className="project-heading">
+            My Recent <strong className="purple">Works</strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            Here are a few projects I've worked on recently.
+          </p>
+        </motion.div>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
+            <ProjectCard
+              imgPath={fxf}
+              isBlog={false}
+              title="FixFlow - AI Quoting Agent for Trade Businesses"
+              description=" Autonomous AI quoting agent that handles the full trades business workflow end-to-end in under 60 seconds, with no human in the loop. Built with LangGraph and Civic MCP"
+              extendedDescription={ <>"<b className="purple">FixFlow</b> is an autonomous AI quoting agent for emergency trades businesses, built on a cyclic <b className="purple">LangGraph</b> state machine with 11 nodes that handles the full customer workflow — symptom diagnosis, job classification, live availability, dynamic pricing, negotiation, and authority enforcement — end-to-end in under 60 seconds, with no human in the loop. The agent is powered by <b className="purple">Claude Haiku</b> (via OpenRouter), traced node-by-node through <b className="purple">LangSmith</b>, and persisted across sessions via <b className="purple">Supabase</b>. Safety and scope enforcement are structural, not prompt-based — gas leak detection triggers a hard stop before any downstream node fires, and authority limits are fully deterministic. Integrations include <b className="purple">Civic MCP</b> for prompt injection defence and live Google Calendar availability, and <b className="purple">Luffa</b> for WhatsApp-based customer interaction. The entire business logic — pricing rules, supported brands, coverage zones, authority thresholds — lives in a single config file, meaning the same architecture can be redeployed for any trades business with zero code changes. Built with <b className="purple">FastAPI</b> on the backend and a <b className="purple">Next.js</b> dashboard for admin visibility.
+              <br />
+                <br /> 
+                🏆<b className="purple"> FixFlow was built over a 48-hour weekend at AI London 2026, a hackathon hosted by Encode Club. It won 1st Place in the "Add Guardrails to Your AI Agent" track and Runner-up in the "Build on Luffa — LuffaNation (Blockchain x AI x Business Track)".</b>"
+                 </>}
+                screenshots={[fxf, fxfg, fxf1, fxf2, fxf3, fxf4, fxf5, fxf6, fxf7 ]}
+                videoLink="https://www.youtube.com/embed/pt8guKIj-v4?si=dqwDrr4piDyrPuvS"       />
+
+
+          </Col>
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={dock}
               isBlog={false}
@@ -101,24 +128,21 @@ and C++"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
-              imgPath={fxf}
+              imgPath={nut}
               isBlog={false}
-              title="FixFlow - AI Quoting Agent for Trade Businesses"
-              description=" Autonomous AI quoting agent that handles the full trades business workflow end-to-end in under 60 seconds, with no human in the loop. Built with LangGraph and Civic MCP"
-              extendedDescription={ <>"<b className="purple">FixFlow</b> is an autonomous AI quoting agent for emergency trades businesses, built on a cyclic <b className="purple">LangGraph</b> state machine with 11 nodes that handles the full customer workflow — symptom diagnosis, job classification, live availability, dynamic pricing, negotiation, and authority enforcement — end-to-end in under 60 seconds, with no human in the loop. The agent is powered by <b className="purple">Claude Haiku</b> (via OpenRouter), traced node-by-node through <b className="purple">LangSmith</b>, and persisted across sessions via <b className="purple">Supabase</b>. Safety and scope enforcement are structural, not prompt-based — gas leak detection triggers a hard stop before any downstream node fires, and authority limits are fully deterministic. Integrations include <b className="purple">Civic MCP</b> for prompt injection defence and live Google Calendar availability, and <b className="purple">Luffa</b> for WhatsApp-based customer interaction. The entire business logic — pricing rules, supported brands, coverage zones, authority thresholds — lives in a single config file, meaning the same architecture can be redeployed for any trades business with zero code changes. Built with <b className="purple">FastAPI</b> on the backend and a <b className="purple">Next.js</b> dashboard for admin visibility.
+              title="AI nutrition coach for personalized diet planning"
+              description="Full-stack AI-powered meal planning and nutrition tracker with personalised calorie targets, recipe analysis, and weekly coaching insights. Built with React 18, Node.js, Supabase, and OpenRouter API, deployed across Vercel + Railway."
+              extendedDescription={ <>"Nutrition App is a full-stack personal nutrition and meal planning platform that computes personalised calorie and macro targets from user profiles (BMR/TDEE-based), and uses AI to generate tailored meal plans, analyse recipe URLs, and deliver weekly coaching insights. Built with <b className="purple">React 18 + Vite + Tailwind CSS</b> on the frontend and <b className="purple">Node.js + Express (ESM)</b> on the backend, with <b className="purple">PostgreSQL via Supabase</b> for data persistence and cookie-based session auth using <b className="purple">express-session</b> and <b className="purple">bcryptjs</b>. AI features — meal planning, recipe analysis, and coaching — are powered by <b className="purple">OpenRouter (Perplexity sonar-pro)</b>, with robust fallback handling for malformed model outputs. Users can also snap a photo of any meal to extract a recipe, or photograph a food item to instantly calculate its nutritional values — making logging as frictionless as possible. Deployed with the frontend on <b className="purple">Vercel</b>, backend on <b className="purple">Railway</b>, and database on <b className="purple">Supabase</b>, with CORS and secure cross-site cookies configured for production.
               <br />
                 <br /> 
-                🏆<b className="purple"> FixFlow was built over a 48-hour weekend at AI London 2026, a hackathon hosted by Encode Club. It won 1st Place in the "Add Guardrails to Your AI Agent" track and Runner-up in the "Build on Luffa — LuffaNation (Blockchain x AI x Business Track)".</b>"
+<b className="purple">🌱 A personal side project built to explore full-stack AI integration — combining deterministic nutrition logic with LLM-driven meal planning, image-based food recognition, and behavioural coaching in a single cohesive product.</b>"
                  </>}
-                screenshots={[fxf, fxfg, fxf1, fxf2, fxf3, fxf4, fxf5, fxf6, fxf7 ]}
-                videoLink="https://www.youtube.com/embed/pt8guKIj-v4?si=dqwDrr4piDyrPuvS"       />
-
-
+                screenshots={[nut, nut1, nut2, nut3, nut4]}       />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={path1}
               isBlog={false}
@@ -142,62 +166,47 @@ and C++"
 
           </Col>
 
-
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
-              imgPath={pol}
+              imgPath={agent1}
               isBlog={false}
-              title="Indoor Spatial Understanding with Pololu Robot"
-              description=" Enhanced functionality of bump sensor for room dimension analysis and indoor navigation in robotics, 
-employing algorithms developed in embedded C using Arduino to estimate contact angles, with 95%
-accuracy"
-              extendedDescription={ <>"The goal of this work is to maximize sensor utility over traditional mapping as it explores the usage of 
-              bump sensors in robotics for indoor space understanding. We challenge the conventional dependence on broad spatial mapping by 
-              introducing a method to estimate the angle of obstacle contact using bump sensor data. Initial evaluations examine this method's 
-              efficiency and scope, exposing the boundaries of accuracy for obstacle placement. In a practical example, a robot traverses a small 
-              environment(ex: rectangle box) and records the distances of edges, angles of corners to calculate the <b className="purple">dimensions of the environment</b> 
-              In order to improve indoor navigation without requiring complex mapping, the research focuses on the analysis of sensor data, 
-              including activation levels and calculations for the environment. Using innovative sensors and algorithms, this research highlights
-               the fundamental potential of robots in environmental <b className="purple">analysis and automation.</b>"
-               </>}
-              screenshots={[pol, pol1,]} // Multiple screenshots
+              title="AgentFunding.exe - Autonomous AI Trading Agent"
+              description="Autonomous trading agent that reasons about live markets and settles trades itself via Kite's x402 agent-to-agent payments, with no human in the loop. Built with LangGraph, Claude Haiku and Supabase at the Kite AI Global Hackathon 2026."
+              extendedDescription={<>
+                <b className="purple">AgentFunding.exe</b> is an autonomous trading agent built during the <b className="purple">Kite AI Global Hackathon 2026</b>, entered
+                across two tracks: Agentic Trading and Agentic Commerce. The project explores a question at the center of agentic AI right now: if an AI agent can
+                reason about markets, can it also be trusted to transact autonomously, without a human in the loop for every payment?
+                <br />
+                <br />
+                <b className="purple">The problem.</b> Most "AI trading bot" demos stop at signal generation: the model says buy or sell, and a human executes the
+                trade. AgentFunding.exe pushes past that boundary by giving the agent the ability to actually move money, using <b className="purple">Kite's x402
+                protocol</b> to make autonomous agent-to-agent payments as part of its trading loop, not just recommend an action and wait.
+                <br />
+                <br />
+                <b className="purple">Architecture.</b> The system is built around a single-orchestrator design using <b className="purple">LangGraph</b>, rather
+                than a multi-agent swarm, to keep the trading logic auditable and the decision path traceable end-to-end. The orchestrator:
+                <ul>
+                  <li>Pulls live market data through the <b className="purple">Twelve Data API</b></li>
+                  <li>Passes market state to <b className="purple">Claude Haiku</b> for interpretation and trade decisioning, chosen for its speed and cost profile so the agent can run frequent decision cycles</li>
+                  <li>Executes settlement autonomously via <b className="purple">Kite's x402 protocol</b> when the agent decides to act</li>
+                  <li>Persists trade history and portfolio state in <b className="purple">Supabase</b>, so the agent remembers its past decisions and can reason over performance across sessions</li>
+                </ul>
+                <b className="purple">Key design decisions.</b>
+                <ul>
+                  <li><b>Single orchestrator over multi-agent:</b> simpler to reason about and debug under hackathon time pressure, and a better fit for a domain where an unexplainable decision has real financial consequences</li>
+                  <li><b>Claude Haiku for the reasoning layer:</b> prioritised latency and cost over raw model size, since the agent needed frequent, cheap decisions rather than occasional expensive ones</li>
+                  <li><b>Stateful memory via Supabase:</b> avoided the common trap of a stateless agent that repeats the same mistakes every run</li>
+                </ul>
+                <b className="purple">Tech stack:</b> LangGraph, Claude Haiku, Kite x402 Protocol, Twelve Data API, Supabase, Python.
+                <br />
+                <br />
+                🏁<b className="purple"> Tracks entered: Agentic Trading and Agentic Commerce, Kite AI Global Hackathon 2026.</b>
+              </>}
+              screenshots={[agent2, agent1, agent3, agent4, agent5, agent6]}
             />
           </Col>
-                              <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={nut}
-              isBlog={false}
-              title="AI nutrition coach for personalized diet planning"
-              description="Full-stack AI-powered meal planning and nutrition tracker with personalised calorie targets, recipe analysis, and weekly coaching insights. Built with React 18, Node.js, Supabase, and OpenRouter API, deployed across Vercel + Railway."
-              extendedDescription={ <>"Nutrition App is a full-stack personal nutrition and meal planning platform that computes personalised calorie and macro targets from user profiles (BMR/TDEE-based), and uses AI to generate tailored meal plans, analyse recipe URLs, and deliver weekly coaching insights. Built with <b className="purple">React 18 + Vite + Tailwind CSS</b> on the frontend and <b className="purple">Node.js + Express (ESM)</b> on the backend, with <b className="purple">PostgreSQL via Supabase</b> for data persistence and cookie-based session auth using <b className="purple">express-session</b> and <b className="purple">bcryptjs</b>. AI features — meal planning, recipe analysis, and coaching — are powered by <b className="purple">OpenRouter (Perplexity sonar-pro)</b>, with robust fallback handling for malformed model outputs. Users can also snap a photo of any meal to extract a recipe, or photograph a food item to instantly calculate its nutritional values — making logging as frictionless as possible. Deployed with the frontend on <b className="purple">Vercel</b>, backend on <b className="purple">Railway</b>, and database on <b className="purple">Supabase</b>, with CORS and secure cross-site cookies configured for production.
-              <br />
-                <br /> 
-<b className="purple">🌱 A personal side project built to explore full-stack AI integration — combining deterministic nutrition logic with LLM-driven meal planning, image-based food recognition, and behavioural coaching in a single cohesive product.</b>"
-                 </>}
-                screenshots={[nut, nut1, nut2, nut3, nut4]}       />
-          </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={apple1}
-              isBlog={false}
-              title="Apple Counting in Orchards"
-              description=" Developed machine vision algorithms using Python, OpenCV, and TensorFlow for automated apple counting, achieving 82% detection accuracy through CNNs and R-CNNs while integrating advanced camera systems for enhanced yield estimation and harvesting efficiency."
-              extendedDescription={ <>"This research aims to enhance agricultural automation by developing a robust system for <b className="purple">detecting, counting,
-               and localizing apples in orchards using visual sensors.</b> Two primary approaches are explored: a traditional machine vision technique 
-               leveraging  <b className="purple">edge detection</b>, and a deep learning-based approach using the  <b className="purple">YOLOv7 model</b>. The performance of both methods is evaluated 
-               against the MinneApple dataset, which includes diverse images of apples at various ripeness levels and orchard conditions. 
-               The machine vision approach employs Canny edge detection for apple identification, achieving a count accuracy of 62.3%. 
-               In contrast, the YOLOv7 deep learning model demonstrates superior performance with a count accuracy of 82.46%, precision of 92.6%, 
-               and recall of 84.7%. The results indicate that while traditional methods are effective in certain scenarios, deep learning models
-                provide a more accurate and adaptable solution for apple counting in complex orchard environments. Future work will focus on 
-                refining the model, expanding the dataset, and improving detection accuracy under diverse conditions."
-                 </>}
-                screenshots={[apple1, apple2, apple3, apple4]}       />
-          </Col>
-
-          
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={sign2}
               isBlog={false}
@@ -225,7 +234,91 @@ extendedDescription={ <>"I have been developing a real-time sign language recogn
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
+            <ProjectCard
+              imgPath={apple1}
+              isBlog={false}
+              title="Apple Counting in Orchards"
+              description=" Developed machine vision algorithms using Python, OpenCV, and TensorFlow for automated apple counting, achieving 82% detection accuracy through CNNs and R-CNNs while integrating advanced camera systems for enhanced yield estimation and harvesting efficiency."
+              extendedDescription={ <>"This research aims to enhance agricultural automation by developing a robust system for <b className="purple">detecting, counting,
+               and localizing apples in orchards using visual sensors.</b> Two primary approaches are explored: a traditional machine vision technique 
+               leveraging  <b className="purple">edge detection</b>, and a deep learning-based approach using the  <b className="purple">YOLOv7 model</b>. The performance of both methods is evaluated 
+               against the MinneApple dataset, which includes diverse images of apples at various ripeness levels and orchard conditions. 
+               The machine vision approach employs Canny edge detection for apple identification, achieving a count accuracy of 62.3%. 
+               In contrast, the YOLOv7 deep learning model demonstrates superior performance with a count accuracy of 82.46%, precision of 92.6%, 
+               and recall of 84.7%. The results indicate that while traditional methods are effective in certain scenarios, deep learning models
+                provide a more accurate and adaptable solution for apple counting in complex orchard environments. Future work will focus on 
+                refining the model, expanding the dataset, and improving detection accuracy under diverse conditions."
+                 </>}
+                screenshots={[apple1, apple2, apple3, apple4]}       />
+          </Col>
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
+            <ProjectCard
+              imgPath={ar1}
+              isBlog={false}
+              title="Assistive robots for elderly people with dementia"
+              description="The project focuses on designing assistive robots, Pepper and TurtleBot3, to help elderly individuals with dementia by providing emotional support, exercise guidance, and mobility assistance. These robots enhance safety and independence within home environments while addressing the unique challenges of dementia care."
+              extendedDescription={ <>"The project investigates the application of assistive robotics to improve the quality of life for elderly 
+              individuals suffering from dementia, using a persona named Phyllis as a case study. It focuses on two distinct 
+              robotic systems: <b className="purple">Pepper, a socially assistive robot, and TurtleBot3, a physically assistive robot.</b> Pepper is designed to engage
+               Phyllis in a seated exercise routine while providing emotional support, safety monitoring, and motivation to adhere to her exercise
+                regimen. Through personalized interactions, Pepper addresses Phyllis's emotional well-being by assessing her mood, offering
+                 encouragement, and utilizing calming techniques when necessary. On the other hand, TurtleBot3 is integrated with a walking 
+                 cane to assist Phyllis with mobility within her home, ensuring she can navigate safely and maintain her independence. 
+                 The study highlights the robots' capabilities in providing not only physical assistance but also essential social interaction, 
+                 emphasizing the importance of addressing both the emotional and physical needs of elderly individuals with dementia. 
+                 Overall, the findings demonstrate the potential of assistive robots to enhance safety, autonomy, and quality of life for 
+                 this vulnerable population while identifying key areas for future improvement in robotic technology and user experience."
+                 </>}
+                screenshots={[ar1, ar2, ar3, ar4]}
+                videoLink="https://www.youtube.com/embed/Tndyo_MYapw?si=7344ojn6aLeIALqq"     />
+          </Col>
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
+            <ProjectCard
+              imgPath={hri}
+              isBlog={false}
+              title="Can robots that incorporate music influence relaxation more effectively than robots without music?"
+              description="This study explores how music-integrated robots can enhance relaxation more effectively than non-musical robots, showing that participants interacting with music-equipped robots experienced deeper relaxation and better physiological responses. The findings highlight the potential of multi-sensory Human-Robot Interaction (HRI) for improved therapeutic outcomes."
+              extendedDescription={ <>"This study investigates the potential of music-integrated robots to enhance relaxation more effectively 
+              than robots without musical features, utilizing the <b className="purple">humanoid robot NAO and the Choregraphe software</b> for interaction design. 
+              Given the growing interest in <b className="purple">Human-Robot Interaction (HRI)</b> for therapeutic purposes and the well-documented soothing effects 
+              of music, the research was conducted through a controlled experiment involving participants who engaged with the NAO robot in 
+              conversational and game-based interactions. Participants were divided into two groups: one experienced these interactions with 
+              background music, while the other interacted without music. Measures of relaxation were assessed through subjective questionnaires 
+              and physiological indicators, such as heart rate variability. The analysis of results revealed that the presence of music 
+              significantly enhanced relaxation effects during robotic interactions; those exposed to music reported higher relaxation scores 
+              and exhibited improved physiological responses, including greater muscle relaxation and lower heart rates compared to their 
+              counterparts who interacted with the robot alone. This study underscores the <b className="purple">importance of integrating music</b> into robotic
+               interactions as a novel therapeutic technique, suggesting promising avenues for future robot design and therapeutic interventions 
+               aimed at improving user engagement and overall effectiveness in relaxation therapies."
+                 </>}
+                screenshots={[hri1, hri2]}       />
+          </Col>
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
+            <ProjectCard
+              imgPath={pol}
+              isBlog={false}
+              title="Indoor Spatial Understanding with Pololu Robot"
+              description=" Enhanced functionality of bump sensor for room dimension analysis and indoor navigation in robotics, 
+employing algorithms developed in embedded C using Arduino to estimate contact angles, with 95%
+accuracy"
+              extendedDescription={ <>"The goal of this work is to maximize sensor utility over traditional mapping as it explores the usage of 
+              bump sensors in robotics for indoor space understanding. We challenge the conventional dependence on broad spatial mapping by 
+              introducing a method to estimate the angle of obstacle contact using bump sensor data. Initial evaluations examine this method's 
+              efficiency and scope, exposing the boundaries of accuracy for obstacle placement. In a practical example, a robot traverses a small 
+              environment(ex: rectangle box) and records the distances of edges, angles of corners to calculate the <b className="purple">dimensions of the environment</b> 
+              In order to improve indoor navigation without requiring complex mapping, the research focuses on the analysis of sensor data, 
+              including activation levels and calculations for the environment. Using innovative sensors and algorithms, this research highlights
+               the fundamental potential of robots in environmental <b className="purple">analysis and automation.</b>"
+               </>}
+              screenshots={[pol, pol1,]} // Multiple screenshots
+            />
+          </Col>
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={meta}
               isBlog={false}
@@ -249,7 +342,8 @@ the Metaverse means having access to a higher level of immersive and entertainin
               videoLink="https://www.youtube.com/embed/wNQocHTgSxY?si=3bEuq2Z6NnPMJ8f_" 
             />
           </Col>
-          <Col md={4} className="project-card">
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={arvr3}
               isBlog={false}
@@ -269,7 +363,8 @@ the Metaverse means having access to a higher level of immersive and entertainin
               screenshots={[arvr1, arvr2, arvr3, arvr4, arvr5]} // Multiple screenshots
             />
           </Col>
-          <Col md={4} className="project-card">
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={hdd}
               isBlog={false}
@@ -292,7 +387,8 @@ with a score of 90.5%. "
                  </>}
                 screenshots={[hdd, hdd1]}       />
           </Col>
-          <Col md={4} className="project-card">
+
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={hn}
               isBlog={false}
@@ -310,52 +406,8 @@ with a score of 90.5%. "
                  </>}
                 screenshots={[hn, hn1, hn2, hn3, hn4]}       />
           </Col>
-          
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={hri}
-              isBlog={false}
-              title="Can robots that incorporate music influence relaxation more effectively than robots without music?"
-              description="This study explores how music-integrated robots can enhance relaxation more effectively than non-musical robots, showing that participants interacting with music-equipped robots experienced deeper relaxation and better physiological responses. The findings highlight the potential of multi-sensory Human-Robot Interaction (HRI) for improved therapeutic outcomes."
-              extendedDescription={ <>"This study investigates the potential of music-integrated robots to enhance relaxation more effectively 
-              than robots without musical features, utilizing the <b className="purple">humanoid robot NAO and the Choregraphe software</b> for interaction design. 
-              Given the growing interest in <b className="purple">Human-Robot Interaction (HRI)</b> for therapeutic purposes and the well-documented soothing effects 
-              of music, the research was conducted through a controlled experiment involving participants who engaged with the NAO robot in 
-              conversational and game-based interactions. Participants were divided into two groups: one experienced these interactions with 
-              background music, while the other interacted without music. Measures of relaxation were assessed through subjective questionnaires 
-              and physiological indicators, such as heart rate variability. The analysis of results revealed that the presence of music 
-              significantly enhanced relaxation effects during robotic interactions; those exposed to music reported higher relaxation scores 
-              and exhibited improved physiological responses, including greater muscle relaxation and lower heart rates compared to their 
-              counterparts who interacted with the robot alone. This study underscores the <b className="purple">importance of integrating music</b> into robotic
-               interactions as a novel therapeutic technique, suggesting promising avenues for future robot design and therapeutic interventions 
-               aimed at improving user engagement and overall effectiveness in relaxation therapies."
-                 </>}
-                screenshots={[hri1, hri2]}       />
-          </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={ar1}
-              isBlog={false}
-              title="Assistive robots for elderly people with dementia"
-              description="The project focuses on designing assistive robots, Pepper and TurtleBot3, to help elderly individuals with dementia by providing emotional support, exercise guidance, and mobility assistance. These robots enhance safety and independence within home environments while addressing the unique challenges of dementia care."
-              extendedDescription={ <>"The project investigates the application of assistive robotics to improve the quality of life for elderly 
-              individuals suffering from dementia, using a persona named Phyllis as a case study. It focuses on two distinct 
-              robotic systems: <b className="purple">Pepper, a socially assistive robot, and TurtleBot3, a physically assistive robot.</b> Pepper is designed to engage
-               Phyllis in a seated exercise routine while providing emotional support, safety monitoring, and motivation to adhere to her exercise
-                regimen. Through personalized interactions, Pepper addresses Phyllis's emotional well-being by assessing her mood, offering
-                 encouragement, and utilizing calming techniques when necessary. On the other hand, TurtleBot3 is integrated with a walking 
-                 cane to assist Phyllis with mobility within her home, ensuring she can navigate safely and maintain her independence. 
-                 The study highlights the robots' capabilities in providing not only physical assistance but also essential social interaction, 
-                 emphasizing the importance of addressing both the emotional and physical needs of elderly individuals with dementia. 
-                 Overall, the findings demonstrate the potential of assistive robots to enhance safety, autonomy, and quality of life for 
-                 this vulnerable population while identifying key areas for future improvement in robotic technology and user experience."
-                 </>}
-                screenshots={[ar1, ar2, ar3, ar4]}
-                videoLink="https://www.youtube.com/embed/Tndyo_MYapw?si=7344ojn6aLeIALqq"     />
-          </Col>
-
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" as={motion.div} {...reveal()}>
             <ProjectCard
               imgPath={man}
               isBlog={false}

@@ -13,7 +13,11 @@ function ProjectCards(props) {
   return (
     <>
       <Card className="project-card-view">
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+        {props.imgPath ? (
+          <Card.Img variant="top" src={props.imgPath} alt={props.title} loading="lazy" />
+        ) : (
+          <div className="card-img-placeholder">{props.placeholder || props.title}</div>
+        )}
         <Card.Body className="d-flex flex-column justify-content-between text-center">
           <div>
             <Card.Title style={{ color: "white", textAlign: "left" }}>
@@ -26,16 +30,7 @@ function ProjectCards(props) {
 
           {/* More Info Button */}
           <div className="mt-auto">
-            <Button
-              variant="info"
-              onClick={handleShow}
-              style={{
-                backgroundColor: "#6f42c1",
-                border: "none",
-                width: "350px", // Fixed width for consistency
-                color: "white", // Button text color
-              }}
-            >
+            <Button variant="info" onClick={handleShow} className="project-card-btn">
               More Info
             </Button>
           </div>
@@ -53,12 +48,12 @@ function ProjectCards(props) {
       >
         <Modal.Header closeButton closeVariant="white" style={{ borderBottom: "none" }}>
           <Modal.Title style={{ color: "#c770f0", fontSize: "1.5rem" }}>
-            {props.title} - More Info
+            {props.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/* Extended Description */}
-          <p style={{ color: "lightgray" }}>{props.extendedDescription}</p>
+          <div style={{ color: "lightgray", marginBottom: "1rem" }}>{props.extendedDescription}</div>
 
           {/* Display Screenshots */}
           {props.screenshots && (

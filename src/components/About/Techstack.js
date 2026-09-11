@@ -1,128 +1,96 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { motion } from "motion/react";
 import { TbAugmentedReality2 } from "react-icons/tb";
 import { AiFillAndroid } from "react-icons/ai";
 import { BsFiletypeSql } from "react-icons/bs";
-import { SiFlask, SiOpencv, SiPytorch, SiTensorflow, SiKeras } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
-
-
-import {
-  DiJavascript1,
-  DiReact,
-  DiPython,
-  DiJava,
-  DiHtml5,
-} from "react-icons/di";
+import { DiJavascript1, DiReact, DiPython, DiJava, DiHtml5 } from "react-icons/di";
 import { FaProjectDiagram } from "react-icons/fa";
 import {
+  SiFlask,
+  SiOpencv,
+  SiPytorch,
+  SiTensorflow,
+  SiKeras,
+  SiNextdotjs,
   SiHiveBlockchain,
   SiC,
   SiCsharp,
   SiLangchain,
   SiCplusplus,
+  SiTypescript,
+  SiNodedotjs,
+  SiFastapi,
+  SiWebrtc,
+  SiPostgresql,
+  SiTailwindcss,
+  SiGooglegemini,
+  SiOpenai,
 } from "react-icons/si";
-import { ReactComponent as CV } from '../../Icons/cv.svg';
-import { ReactComponent as ML } from '../../Icons/ml.svg';
+import { RiRobot2Line, RiVoiceprintLine } from "react-icons/ri";
+import { MdGraphicEq } from "react-icons/md";
+import { ReactComponent as CV } from "../../Icons/cv.svg";
+import { ReactComponent as ML } from "../../Icons/ml.svg";
+import { staggerParent, staggerChild } from "../Reveal";
 
-function Techstack() {
+const techs = [
+  // Languages
+  [DiPython, "Python"],
+  [SiTypescript, "TypeScript"],
+  [DiJavascript1, "JavaScript"],
+  [SiC, "C Language"],
+  [SiCplusplus, "C++"],
+  [SiCsharp, "C#"],
+  [DiJava, "Java"],
+  // AI
+  [RiRobot2Line, "Agentic AI"],
+  [RiVoiceprintLine, "Voice AI (Pipecat)"],
+  [MdGraphicEq, "Speech (STT / TTS)"],
+  [SiLangchain, "LangChain"],
+  [FaProjectDiagram, "LangGraph"],
+  [SiGooglegemini, "Gemini"],
+  [SiOpenai, "OpenAI"],
+  [GiArtificialIntelligence, "AI"],
+  [ML, "Machine Learning"],
+  [CV, "Computer Vision"],
+  [SiOpencv, "OpenCV"],
+  [SiPytorch, "PyTorch"],
+  [SiTensorflow, "Tensorflow"],
+  [SiKeras, "Keras"],
+  // Backend
+  [SiNodedotjs, "Node.js"],
+  [SiFastapi, "FastAPI"],
+  [SiFlask, "Flask"],
+  [SiWebrtc, "WebRTC"],
+  [SiPostgresql, "PostgreSQL"],
+  [BsFiletypeSql, "SQL"],
+  // Frontend & other
+  [DiReact, "React"],
+  [SiNextdotjs, "Next.js"],
+  [SiTailwindcss, "Tailwind CSS"],
+  [DiHtml5, "HTML5"],
+  [AiFillAndroid, "Android"],
+  [TbAugmentedReality2, "Augmented Reality"],
+  [SiHiveBlockchain, "Blockchain"],
+];
+
+// Shared by Toolstack.
+export function IconGrid({ items }) {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiC />
-        <div className="tech-text">C Language</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCplusplus />
-        <div className="tech-text">C++</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp />
-        <div className="tech-text">C#</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-        <div className="tech-text">Python</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-        <div className="tech-text">JavaScript</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-        <div className="tech-text">Java</div>
-      </Col>
-            <Col xs={4} md={2} className="tech-icons">
-        <SiLangchain />
-        <div className="tech-text">LangChain</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <FaProjectDiagram />
-        <div className="tech-text">LangGraph</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiOpencv />
-        <div className="tech-text">OpenCV</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
-        <div className="tech-text">PyTorch</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
-        <div className="tech-text">Tensorflow</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiKeras />
-        <div className="tech-text">Keras</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-        <div className="tech-text">HTML5</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <GiArtificialIntelligence />
-        <div className="tech-text">AI</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <ML />
-        <div className="tech-text">Machine Learning</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <CV />
-        <div className="tech-text">Computer Vision</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHiveBlockchain />
-        <div className="tech-text">Blockchain</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFlask />
-        <div className="tech-text">Flask</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <BsFiletypeSql />
-        <div className="tech-text">SQL</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <AiFillAndroid />
-        <div className="tech-text">Android</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbAugmentedReality2 />
-        <div className="tech-text">Augmented Reality</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-        <div className="tech-text">React</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-        <div className="tech-text">Next.js</div>
-      </Col>
+    <Row as={motion.div} style={{ justifyContent: "center", paddingBottom: "50px" }} {...staggerParent}>
+      {items.map(([Icon, name]) => (
+        <Col xs={4} md={2} className="tech-icons" key={name} as={motion.div} {...staggerChild} whileHover={{ scale: 1.08 }}>
+          <Icon />
+          <div className="tech-text">{name}</div>
+        </Col>
+      ))}
     </Row>
   );
+}
+
+function Techstack() {
+  return <IconGrid items={techs} />;
 }
 
 export default Techstack;
