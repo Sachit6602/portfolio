@@ -84,7 +84,7 @@ function Home() {
           </Row>
 
           <motion.div className="home-cta-row" {...reveal(d + 0.6)}>
-            <Link to="/about#techstack" className="home-cta">
+            <Link to="/about" className="home-cta">
               Explore my background and skills <AiOutlineArrowRight />
             </Link>
             <Link to="/project" className="home-cta">

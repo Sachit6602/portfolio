@@ -251,6 +251,7 @@ button:focus {
 }
 #tsparticles {
   position: fixed !important;
+  pointer-events: none; /* the canvas sat on top of the home CTAs and ate their clicks */
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
@@ -1263,3 +1264,150 @@ button:focus {
   display: none !important;
 }
 
+
+/* --------- */
+/* Phones */
+/* --------- */
+
+/* video embeds scale instead of letterboxing in a fixed 315px box */
+.project-video iframe {
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.6rem 1rem !important;
+  }
+
+  /* sections sat under a 150px top pad sized for desktop */
+  .about-section,
+  .project-section {
+    padding-top: 90px !important;
+  }
+
+  .resume-section {
+    padding-top: 90px !important;
+  }
+
+  .home-about-section {
+    padding-top: 40px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .home-about-description h1 {
+    font-size: 1.7em !important; /* beats the inline 2.6em on Home2 */
+  }
+
+  .home-about-body {
+    padding-top: 25px;
+    font-size: 1.05em !important;
+  }
+
+  .project-heading {
+    font-size: 1.7em !important;
+  }
+
+  /* stack the two CTAs full-width instead of squeezing them side by side */
+  .home-cta-row {
+    gap: 14px;
+    margin-top: 35px;
+  }
+
+  .home-cta {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+
+  /* 4.5em icons in a 15px-margined col only fit 2 per row and clip their label */
+  .tech-icons {
+    width: calc(33.333% - 12px) !important;
+    margin: 6px !important;
+    padding: 14px 8px !important;
+    font-size: 2.4em !important;
+  }
+
+  .tech-text {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    margin-top: 6px;
+    overflow-wrap: anywhere;
+  }
+
+  /* timeline indent was eating ~25% of a phone's width */
+  .exp-item {
+    margin: 0 0 20px 16px;
+    padding: 16px 14px;
+  }
+
+  .exp-item::before {
+    left: -25px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .exp-head {
+    padding-right: 24px;
+  }
+
+  .exp-head h3 {
+    font-size: 1.05em;
+  }
+
+  .project-card {
+    padding: 20px 12px !important;
+  }
+
+  /* all five socials on one row instead of wrapping 4 + 1 */
+  .social-icons {
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+  }
+
+  .home-about-social-links li {
+    margin: 5px 4px;
+  }
+
+  .resume .resume-item ul {
+    text-align: left; /* justify makes rivers at this width */
+  }
+}
+
+@media (max-width: 576px) {
+  /* justified text makes rivers in a ~300px column */
+  .quote-card-view blockquote p {
+    text-align: left !important;
+  }
+}
+
+/* --------- */
+/* Mobile notice */
+/* --------- */
+.mobile-notice {
+  border: 1px solid rgba(199, 112, 240, 0.4) !important;
+}
+
+.mobile-notice .modal-body {
+  padding: 28px 22px 24px;
+}
+
+.mobile-notice-icon {
+  font-size: 2.4em;
+  color: #c770f0;
+  margin-bottom: 12px;
+}
+
+.mobile-notice p {
+  color: #e0e0e0;
+  font-size: 1.05em;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.mobile-notice .btn {
+  border-radius: 999px !important;
+  padding: 8px 30px !important;
+}

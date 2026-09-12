@@ -20,7 +20,7 @@ const jobs = [
   },
   {
     role: "Graphic Designer & Video Editor",
-    org: "Self-employed · Freelance",
+    org: "Freelancing",
     when: "Mar 2019 – Oct 2023",
     where: "Remote",
     sections: [
@@ -33,7 +33,7 @@ const jobs = [
         "Designed posts and video content for an economics teacher's public-awareness campaign on the importance of economics",
       ]],
     ],
-    stack: ["Adobe Photoshop", "Adobe Premiere Pro", "Blender", "Team Leadership", "Team Management", "Teamwork", "Social Media", "YouTube"],
+    stack: ["Adobe Photoshop", "Adobe Premiere Pro", "Blender", "Client Management", "Teamwork", "Social Media", "YouTube"],
   },
   {
     role: "AR Development Intern",

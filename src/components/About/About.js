@@ -34,7 +34,7 @@ function About() {
           <Col
             md={5}
             style={{ paddingTop: "1px", paddingBottom: "100px" }}
-            className="about-img"
+            className="about-img d-none d-md-block"
           >
              <Spline scene="https://prod.spline.design/WsoYDL8DhYLMznYE/scene.splinecode" />
           </Col>

@@ -12,6 +12,7 @@ import {
   Navigate
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import MobileNotice from "./components/MobileNotice";
 import { MotionConfig } from "motion/react";
 import "./style.css";
 import "./App.css";
@@ -36,6 +37,7 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
+        <MobileNotice />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
